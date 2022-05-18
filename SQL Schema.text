@@ -1,0 +1,76 @@
+mysql> use cms;
+Database changed
+mysql> show tables;
++---------------+
+| Tables_in_cms |
++---------------+
+| admin_login   |
+| books         |
+| events        |
+| faculty_login |
+| library_login |
+| student_login |
+| timetable     |
++---------------+
+7 rows in set (0.08 sec)
+
+mysql> select * from admin_login;
++-----------+-----------+
+| ausername | apassword |
++-----------+-----------+
+| jvts      | jvts      |
++-----------+-----------+
+1 row in set (0.00 sec)
+
+mysql> select * from books;
++---------+-------------+----------------+------------+
+| book_id | book_author | book_name      | book_price |
++---------+-------------+----------------+------------+
+|       1 | joy         | infrastructure | 1000       |
+|       2 | james       | nature         | 2000       |
+|       3 | joon        | peace          | 3000       |
++---------+-------------+----------------+------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from events;
++----+------------+----------------+----------+
+| id | event_date | event_name     | pic_byte |
++----+------------+----------------+----------+
+|  1 | 22-08-2022 | college fest   | NULL     |
+|  2 | 16-10-2022 | food day       | NULL     |
+|  3 | 15-11-2022 | graduation day | NULL     |
++----+------------+----------------+----------+
+3 rows in set (0.00 sec)
+
+mysql> select * from faculty_login;
++-----------+-----------+
+| fusername | fpassword |
++-----------+-----------+
+| jvts      | jvts      |
++-----------+-----------+
+1 row in set (0.00 sec)
+
+mysql> select * from library_login;
++-----------+-----------+
+| lusername | lpassword |
++-----------+-----------+
+| jvts      | jvts      |
++-----------+-----------+
+1 row in set (0.00 sec)
+
+mysql> select * from student_login;
++-----------+-----------+------------+---------+----------------+-----------+--------+
+| susername | batch     | contact_no | name    | parent_details | spassword | stream |
++-----------+-----------+------------+---------+----------------+-----------+--------+
+| jvts      | 2019-2021 | 1234567891 | surekha | null           | jvts      | CSE    |
+| surekhaj  | 2019-2021 | 1234567891 | surekha | null           | jvts      | ECE    |
++-----------+-----------+------------+---------+----------------+-----------+--------+
+2 rows in set (0.00 sec)
+
+mysql> select * from timetable;
++--------------+-----------+------------+--------+---------+
+| timetable_id | batch     | department | stream | name    |
++--------------+-----------+------------+--------+---------+
+|            1 | 2022-2023 | NULL       | ECE    | Angular |
++--------------+-----------+------------+--------+---------+
+1 row in set (0.00 sec)
